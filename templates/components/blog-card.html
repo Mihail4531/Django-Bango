@@ -1,0 +1,14 @@
+<div class="box tilt">
+    <img draggable="true" src="{{ post.image.url }}"/>
+    <div class="content">
+        <div class="tag">
+            <h3>{{ post.category }}</h3>
+        </div>
+        <div class="desc">
+            <p>{{ post.content|truncatechars:200 }}</p>
+            <div class="btns">
+                <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            </div>
+        </div>
+    </div>
+</div>

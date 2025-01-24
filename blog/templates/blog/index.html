@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Главная {% endblock %}
+{% block content %}
+<section class="work" id="work">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+    <div class="box-container">
+        {% if posts %}
+        {% for post in posts %}
+        {% include 'components/blog-card.html' with post=post %}
+        {% endfor %}
+        {% else %}
+        <div class="alert alert-light" role="alert">
+            Записи отсутсвуют!
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div class="viewall">
+        <a href="/projects" class="btn"><span>View All</span>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}
